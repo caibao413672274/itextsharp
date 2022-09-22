@@ -144,6 +144,11 @@ namespace iTextSharp.text {
             Version localVersion = new Version();
             try {
                 Type type = GetLicenseKeyClass();
+                if (type == null) {
+
+                    localVersion.iTextVersion = "System";
+                    return localVersion;
+                }
                 Type[] cArg = new Type[] { typeof(String) };
                 MethodInfo m = type.GetMethod("GetLicenseeInfoForVersion", cArg);
                 String coreVersion = release;
