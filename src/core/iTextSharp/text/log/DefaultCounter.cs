@@ -78,6 +78,8 @@ namespace iTextSharp.text.log {
         }
 
         private void PlusOne() {
+
+            /*
 			if (count++ > repeat_level) {
 				if (Version.IsAGPLVersion) {
 					level++;
@@ -88,7 +90,8 @@ namespace iTextSharp.text.log {
 					}
 					Console.WriteLine (Encoding.UTF8.GetString (message));
 				}
-			}
+			}*/
+
         }
 
         private static byte[] message = Convert.FromBase64String(
